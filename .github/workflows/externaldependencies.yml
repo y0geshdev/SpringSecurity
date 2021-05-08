@@ -38,3 +38,10 @@ jobs:
         run: |
           cd SpringSecurity
           cat pom.xml
+      
+      # Update the pom file as artifact
+      - name: Upload pom file
+        uses: actions/upload-artifact@v2
+        with:
+          name: uploadedPom.xml
+          path: pom.xml
